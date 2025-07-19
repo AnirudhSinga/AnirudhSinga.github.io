@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jane Doe | Tech Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced Portfolio | Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Loader with illusion animation -->
-  <div id="loader">
-    <svg class="spinner" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="40" stroke-width="8" stroke="currentColor" fill="none"/>
-    </svg>
-    <p>Igniting Tech Sparks…</p>
-  </div>
 
-  <div id="content" class="hidden">
-    <header>
-      <img src="tesla-logo.svg" alt="Tesla logo" class="logo">
-      <nav>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ishika Maurya</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="hero">
-      <div class="hero-tech-bg">
-        <h1>Jane Doe</h1>
-        <h2>Tech Innovator & Developer</h2>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Ishika Maurya</span></h1>
+            <p>Web Developer | UI/UX Enthusiast | Problem Solver</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
     </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Blending coding with futuristic visuals—from Tesla-inspired aesthetics to immersive UX.</p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I’m a passionate web developer with a love for creating beautiful, functional websites that provide excellent user experiences. My focus is on building responsive and accessible designs.</p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">🧠 AI Dashboard</div>
-        <div class="project-card">⚡ EV Charging App</div>
-        <div class="project-card">🔧 Automation Toolkit</div>
-      </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="C:\Users\maury\OneDrive\Desktop\coding\html\Screenshot 2024-10-05 205950.png" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A responsive Cryptocurrency Dashboard with advanced UI/UX features. Built using React and CSS animations.</p>
+            </div>
+            <div class="project-card">
+                <img src="C:\Users\maury\OneDrive\Desktop\coding\html\Screenshot 2024-10-05 210646.png" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>An interactive Quiz app with drag-and-drop functionality and advanced filtering.</p>
+            </div>
+            <div class="project-card">
+                <img src="C:\Users\maury\OneDrive\Desktop\coding\html\Screenshot 2024-10-05 211004.png" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>A personal finance tracker with real-time data visualization using Chart.js and local storage.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: jane@example.com</p>
-      <p>LinkedIn / GitHub / Twitter</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>I'm always open to new opportunities and collaborations. Get in touch with me using the form below or connect with me on social media.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-      <p>© 2025 Jane Doe</p>
+        <p>&copy; 2024 Ishika Maurya | All Rights Reserved</p>
     </footer>
-  </div>
 
-  <script>
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
-      const content = document.getElementById("content");
-      loader.classList.add("fade-out");
-      setTimeout(() => {
-        loader.style.display = "none";
-        content.classList.remove("hidden");
-      }, 600);
-    });
-  </script>
+    <script src="scrips.js"></script>
 </body>
 </html>
