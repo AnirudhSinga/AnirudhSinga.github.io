@@ -1,7 +1,21 @@
 // Loader screen logic
-window.addEventListener('load', function() {
-    document.getElementById('loader').style.display = 'none';
-    document.getElementById('main-content').style.display = '';
+document.addEventListener('DOMContentLoaded', function() {
+    const progressElement = document.getElementById('progress');
+    let progress = 0;
+    
+    const interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 10) + 1;
+        if (progress > 100) progress = 100;
+        progressElement.textContent = progress;
+        
+        if (progress === 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 500);
+        }
+    }, 200);
 });
 
 // Smooth scrolling for anchor links
