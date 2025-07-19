@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Professional Portfolio">
-  <title>John Doe | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Jane Doe | Tech Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Loader -->
+  <!-- Loader with illusion animation -->
   <div id="loader">
-    <div class="spinner"></div>
-    <p>Loading Portfolio...</p>
+    <svg class="spinner" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke-width="8" stroke="currentColor" fill="none"/>
+    </svg>
+    <p>Igniting Tech Sparks…</p>
   </div>
 
-  <!-- Main Content -->
   <div id="content" class="hidden">
     <header>
-      <h1>John Doe</h1>
+      <img src="tesla-logo.svg" alt="Tesla logo" class="logo">
       <nav>
+        <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -27,40 +27,46 @@
     </header>
 
     <section id="hero">
-      <h2>Welcome to my portfolio</h2>
-      <p>Creative Developer | Tech Enthusiast | Problem Solver</p>
+      <div class="hero-tech-bg">
+        <h1>Jane Doe</h1>
+        <h2>Tech Innovator & Developer</h2>
+      </div>
     </section>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m a developer focused on building scalable and maintainable web apps.</p>
+      <p>Blending coding with futuristic visuals—from Tesla-inspired aesthetics to immersive UX.</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-grid">
-        <div class="project-card">Project 1</div>
-        <div class="project-card">Project 2</div>
-        <div class="project-card">Project 3</div>
+        <div class="project-card">🧠 AI Dashboard</div>
+        <div class="project-card">⚡ EV Charging App</div>
+        <div class="project-card">🔧 Automation Toolkit</div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: johndoe@example.com</p>
-      <p>LinkedIn: linkedin.com/in/johndoe</p>
+      <p>Email: jane@example.com</p>
+      <p>LinkedIn / GitHub / Twitter</p>
     </section>
 
     <footer>
-      <p>© 2025 John Doe</p>
+      <p>© 2025 Jane Doe</p>
     </footer>
   </div>
 
   <script>
-    // Hide loader after content is loaded
     window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("content").classList.remove("hidden");
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+      loader.classList.add("fade-out");
+      setTimeout(() => {
+        loader.style.display = "none";
+        content.classList.remove("hidden");
+      }, 600);
     });
   </script>
 </body>
